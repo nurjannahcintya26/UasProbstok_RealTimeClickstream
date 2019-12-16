@@ -1,0 +1,5 @@
+library(clickstream)
+cls <- readClickstreams(file = "cann.csv",sep = ";", header = TRUE)
+mc <- fitMarkovChain(cls)
+startPattern <- new("Pattern", sequence = c("acme","coax"))
+plot(mc)
